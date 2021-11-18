@@ -39,10 +39,14 @@ app.get("/", (req: express.Request, res: express.Response) => {
   res.status(200).send(runningMessage);
 });
 
+app.get("*", (req: express.Request, res: express.Response) => {
+  res.status(404).send("not found");
+});
+
 server.listen(port, () => {
   routes.forEach((route: CommonRoutesConfig) => {
     debugLog(`Routes config for ${route.getName()}`);
   });
-
+  console.log(process.env.DEBUG);
   console.log(runningMessage);
 });
