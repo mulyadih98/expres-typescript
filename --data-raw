@@ -1,5 +1,0 @@
-{"error":"Missing required fields email and password"}--_curl_--
->     "email": "marcos.henrique@toptal.com"
---_curl_--
->     "password": "sup3rS3cr3tPassw0rd!23"
-> 
